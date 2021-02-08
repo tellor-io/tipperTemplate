@@ -23,6 +23,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - uses: ./../tipper/action.yml
-        with:
-          network: "mainnet" #your preference here
-          myID: 10 #your preference here
+      with:
+        network: "mainnet" #your preference here
+        myID: 10 #your preference here
