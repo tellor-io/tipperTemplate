@@ -1,7 +1,7 @@
 name: TipTester
-on:
-  schedule: 
-  - cron: "0 0 * * *"  # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
+on: push
+  # schedule: 
+  # - cron: "0 0 * * *"  # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
 
 
 jobs:
