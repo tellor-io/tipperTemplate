@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - uses: ./../../tipper/.github/workflows/action.yml
+    - uses: ./../tipper/.github/workflows/action.yml
       with:
         network: "mainnet" #your preference here
         myID: 10 #your preference here
