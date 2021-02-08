@@ -13,15 +13,16 @@ jobs:
         node-version: [14.x]
     
     steps:
-    - uses: actions/checkout@v2
-      with:
-        repository: 'tellor-io/tipper'
-    - name: Run test with Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - uses: ./../tipper/.github/workflows/action.yml
-      with:
-        network: "mainnet" #your preference here
-        myID: 10 #your preference here
+      - uses: actions/tipper@v1
+    # - uses: actions/checkout@v2
+    #   with:
+    #     repository: 'tellor-io/tipper'
+    # - name: Run test with Node.js ${{ matrix.node-version }}
+    #   uses: actions/setup-node@v1
+    #   with:
+    #     node-version: ${{ matrix.node-version }}
+    # - run: npm install
+    # - uses: ./../tipper/.github/workflows/action.yml
+        with:
+          network: "mainnet" #your preference here
+          myID: 10 #your preference here
