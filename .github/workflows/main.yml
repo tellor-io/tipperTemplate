@@ -6,11 +6,7 @@ on: push
 
 jobs:
   TipTester:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
+    # runs-on: ubuntu-latest
     
     steps:
     - uses: tellor-io/tipper@master
