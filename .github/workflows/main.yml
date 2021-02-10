@@ -13,10 +13,10 @@ jobs:
         node-version: [14.x]
     
     steps:
-      # - uses: actions/tipper@v1
-    - uses: actions/checkout@v2
-      with:
-        repository: 'tellor-io/tipper'
+      - uses: tellor-io/tipper@master
+    # - uses: actions/checkout@v2
+    #   with:
+    #     repository: 'tellor-io/tipper'
     - name: Run test with Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
