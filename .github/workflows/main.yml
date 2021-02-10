@@ -6,7 +6,7 @@ on: push
 
 jobs:
   TipTester:
-    # runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     
     steps:
     - uses: tellor-io/tipper@master
