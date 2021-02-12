@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - run: ls
     - uses: tellor-io/tipper@master
       with:
         network: "mainnet" #your preference here
