@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: tellor-io/tipper@master
       with:
-        network: "mainnet" #your preference here
+        network: "rinkeby" #your preference here
         myID: 10 #your preference here
 
       env:
