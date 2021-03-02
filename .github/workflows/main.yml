@@ -15,9 +15,7 @@ jobs:
         network: "rinkeby" #your preference here
         myID: 10 #your preference here
 
-      env:
-        ETH_PK: ${{ secrets.ETH_PK }}
-        ETH_PUB: ${{ secrets.ETH_PUB }}
+      env: #adjust secrets for rinkeby vs mainnet
+        PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         NODE: ${{ secrets.NODE }}
-        RINKEBY_ETH_PK: ${{ secrets.RINKEBY_ETH_PK }}
-        RINKEBY_ETH_PUB: ${{ secrets.RINKEBY_ETH_PUB }}
