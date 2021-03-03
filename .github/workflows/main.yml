@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: tellor-io/tipper@master
       with:
-        network: "rinkeby" #choose between rinkeby and mainnet
+        network: "rinkeby" #choose between "rinkeby" and "mainnet"
         myID: 10 #link to documentation
 
       env: #adjust secrets for rinkeby vs mainnet
