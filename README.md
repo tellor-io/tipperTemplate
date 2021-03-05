@@ -8,7 +8,7 @@ You can use this tool to request new on-chain Tellor oracle data, all without le
 2. Navigate to repo settings. ![repo settings](helper-images/settings.png "Settings")
 3. Navigate to repo secrets. ![repo secrets](helper-images/secrets.png "secrets")
 4. Add the necessary repo secrets. ![add secret](helper-images/new-secret.png "add secret")
-5. Update `network`, `tipID`, and `dataFreshness` in `.github/workflows/main.yaml`
+5. Update `network`, `tipID`, and `dataFreshness` in `.github/workflows/main.yml`
 
 ## What secrets will I need?
 Note: you will need to use these exact secrets titles verbatim.
@@ -18,8 +18,8 @@ Note: you will need to use these exact secrets titles verbatim.
 * `RINKEBY_NODE` -- your JSON-RPC rinkeby endpoint. ususally HTTP.
 
 ## How can I update the workflow from github?
-1. Navigate to `main.yaml` in the `.github/workflows` directory.
-2. Edit `main.yaml` ![edit yaml](helper-images/edit-yaml.png "editing")
+1. Navigate to `main.yml` in the `.github/workflows` directory.
+2. Edit `main.yml` ![edit yml](helper-images/edit-yml.png "editing")
 3. On lines 15 and 16, fill in your preferred `network` and tip ID (`tipID`).
 4. On line 4, update your cronjob preferences (how often you'll request Tellor oracle data) according to your needs. Cronjob documentation is provided in the comments!
 5. Commit changes!
