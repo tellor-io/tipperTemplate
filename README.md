@@ -19,7 +19,7 @@ Note: you will need to use these exact secrets titles verbatim.
 
 ## How can I update the workflow from github?
 1. Navigate to `main.yml` in the `.github/workflows` directory.
-2. Edit `main.yml` ![edit yml](helper-images/edit-yml.png "editing")
+2. Edit `main.yml` ![edit yml](helper-images/edit-yaml.png "editing")
 3. On lines 15 and 16, fill in your preferred `network` and tip ID (`tipID`).
 4. On line 4, update your cronjob preferences (how often you'll request Tellor oracle data) according to your needs. Cronjob documentation is provided in the comments!
 5. Commit changes!
