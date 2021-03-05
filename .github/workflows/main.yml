@@ -1,7 +1,7 @@
 name: TipTester
-on: push
-  # schedule: 
-  # - cron: "0 0 * * *"  # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
+on:
+  schedule: 
+  - cron: "0 0 * * *"  # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
 
 
 jobs:
@@ -13,9 +13,10 @@ jobs:
     - uses: tellor-io/tipper@master
       with:
         network: "rinkeby" #choose between "rinkeby" and "mainnet"
-        myID: 10 #link to documentation
+        tipID: 10 #link to documentation
 
       env: #adjust secrets for rinkeby vs mainnet
         PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        NODE: ${{ secrets.NODE }}
+        MAINNET_NODE: ${{ secrets.MAINNET_NODE }}
+        RINKEBY_NODE: ${{ secrets.RINKEBY_NODE }}
