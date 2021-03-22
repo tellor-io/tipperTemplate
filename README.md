@@ -8,7 +8,7 @@ You can use this tool to request new on-chain Tellor oracle data, all without le
 2. Navigate to repo settings. ![repo settings](helper-images/settings.png "Settings")
 3. Navigate to repo secrets. ![repo secrets](helper-images/secrets.png "secrets")
 4. Add the necessary repo secrets. ![add secret](helper-images/new-secret.png "add secret")
-5. Update `network`, `tipID`, and `dataFreshness` in `.github/workflows/main.yml`
+5. Update `network`, `tipID`, `freshnessTimeUnit`, and `freshnessTimeLength` in `.github/workflows/main.yml`
 
 ## What secrets will I need?
 Note: you will need to use these exact secrets titles verbatim.
@@ -24,7 +24,11 @@ Note: you will need to use these exact secrets titles verbatim.
 4. On line 4, update your cronjob preferences (how often you'll request Tellor oracle data) according to your needs. Cronjob documentation is provided in the comments!
 5. Commit changes!
 
-## What are my choices for `network`, `tipID`, and `dataFreshness`?
+## What are my choices for editing the workflow?
 * `network` -- the ethereum network you'd like to connect with. Choose between "rinkeby" and "mainnet".
 * `tipID` -- the data type you'd like to request (ex. 1 for ETH/USD). You can find the list of all current tip IDs [here](https://www.tellorscan.com/prices).
-* `dataFreshness` -- this is your preferred amount of time since last request to this `tipID` on your chosen `network`.
+* `dataFreshness` -- this is your preferred amount of time since last request to this `tipID` on your chosen `network`. This variable uses two workflow variables. These are:
+    * `freshnessTimeUnit` -- the unit of time you'd like to check for the most recent tip on your `requestID`. Ex: week, day, second, etc. For more information, visit https://day.js.org/docs/en/manipulate/add#list-of-all-available-units.
+    * `freshnessTimeLength` -- the amount of your `freshnessTimeUnit` (ex. week, day, second, year) you'd like to check for.
+
+    * Combined, these two workflow variables will save you TRB on unnecessary tips.
