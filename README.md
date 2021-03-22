@@ -4,7 +4,7 @@
 You can use this tool to request new on-chain Tellor oracle data, all without leaving github!
 
 ## How do I get started?
-1. Fork this repo! ![forking demo](helper-images/fork.png "Fork")
+1. Click the green "use this template" button. ![template demo](helper-images/use-this-template-button.png "Fork")
 2. Navigate to repo settings. ![repo settings](helper-images/settings.png "Settings")
 3. Navigate to repo secrets. ![repo secrets](helper-images/secrets.png "secrets")
 4. Add the necessary repo secrets. ![add secret](helper-images/new-secret.png "add secret")
