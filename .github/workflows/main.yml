@@ -16,6 +16,7 @@ jobs:
         requestID: #more info at https://www.tellorscan.com/prices
         dataFreshness: #str: the longest duration of time (ex. 1 day, 2 weeks, etc)
                        #you would wait before requesting new on-chain data
+                       #for more info, refer to https://www.npmjs.com/package/parse-duration
       env:
         # These secrets will need to be manually added to your repo's secrets on github
         # Please make sure that the github secret names match their names here.
