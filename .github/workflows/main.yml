@@ -1,3 +1,7 @@
+|
+
+|
+
 name: TipTester
 on:
   schedule: 
@@ -18,7 +22,7 @@ jobs:
         freshnessTimeLength: #amount of timeUnit https://day.js.org/docs/en/manipulate/add#list-of-all-available-units
 
       env: #adjust secrets for rinkeby vs mainnet
-        PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }}
-        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        MAINNET_NODE: ${{ secrets.MAINNET_NODE }}
-        RINKEBY_NODE: ${{ secrets.RINKEBY_NODE }}
+        PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }} # your account's public key
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # your account's private key
+        MAINNET_NODE: ${{ secrets.MAINNET_NODE }} #your JSON-RPC mainnet endpoint.
+        RINKEBY_NODE: ${{ secrets.RINKEBY_NODE }} #your JSON-RPC rinkeby endpoint.
