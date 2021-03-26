@@ -17,10 +17,9 @@ jobs:
         dataFreshness: #str: the longest duration of time (ex. 1 day, 2 weeks, etc)
                        #you would wait before requesting new on-chain data
       env:
+        # These secrets will need to be manually added to your repo's secrets on github
+        # Please make sure that the github secret names match their names here.
         PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }} # your account's public key
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # your account's private key
         MAINNET_NODE: ${{ secrets.MAINNET_NODE }} #your JSON-RPC mainnet endpoint.
         RINKEBY_NODE: ${{ secrets.RINKEBY_NODE }} #your JSON-RPC rinkeby endpoint.
-        # ^
-        # ^ These secrets will need to be manually added to your repo's secrets on github
-        #   Please make sure that the github secret names match their names here.
