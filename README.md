@@ -3,15 +3,16 @@
 ## What can I use this for?
 You can use this tool to request new on-chain Tellor oracle data, all without leaving github!
 
-## How do I get started?
+To get started, you will need to use this template, add some secrets to your repo, and edit the provided workflow.
+
+## Using the template
 1. Click the green "use this template" button. ![template demo](helper-images/use-this-template-button.png "Fork")
 2. Navigate to repo settings. ![repo settings](helper-images/settings.png "Settings")
 3. Navigate to repo secrets. ![repo secrets](helper-images/secrets.png "secrets")
 4. Add the necessary repo secrets. ![add secret](helper-images/new-secret.png "add secret")
-5. Update `network`, `tipID`, `freshnessTimeUnit`, and `freshnessTimeLength` in `.github/workflows/main.yml`
 
 ## What secrets will I need?
-Note: you will need to use these exact secrets titles verbatim.
+You can find the names of the github secrets to set on the `main.yml` file. Note: you will need to use these exact secrets titles verbatim.
 * `PUBLIC_KEY` -- your account's public key
 * `PRIVATE_KEY` -- your account's private key
 * `MAINNET_NODE` -- your JSON-RPC mainnet endpoint. usually HTTP.

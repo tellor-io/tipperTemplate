@@ -1,11 +1,7 @@
-|
-
-|
-
 name: TipTester
 on:
   schedule: 
-  - cron: "0 0 * * *"  # schedule to your preference https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
+  - cron: "0 0 * * *"  # schedule tipping to your preference https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
 
 
 jobs:
@@ -16,13 +12,16 @@ jobs:
     - uses: actions/checkout@v2
     - uses: tellor-io/tipper@master
       with:
-        network: "rinkeby" #choose between "rinkeby" and "mainnet"
-        requestID: 10 #more info at https://www.tellorscan.com/prices
+        network: #choose between "rinkeby" and "mainnet"
+        requestID: #more info at https://www.tellorscan.com/prices
         freshnessTimeUnit: #day, week, minute, etc. https://day.js.org/docs/en/manipulate/add#list-of-all-available-units
         freshnessTimeLength: #amount of timeUnit https://day.js.org/docs/en/manipulate/add#list-of-all-available-units
-
+        dataFreshness: #str: 
       env: #adjust secrets for rinkeby vs mainnet
         PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }} # your account's public key
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # your account's private key
         MAINNET_NODE: ${{ secrets.MAINNET_NODE }} #your JSON-RPC mainnet endpoint.
         RINKEBY_NODE: ${{ secrets.RINKEBY_NODE }} #your JSON-RPC rinkeby endpoint.
+        # ^
+        # ^ These secrets will need to be manually added to your repo's secrets on github
+        #   Please make sure that the github secret names match their names here.
