@@ -14,10 +14,9 @@ jobs:
       with:
         network: #choose between "rinkeby" and "mainnet"
         requestID: #more info at https://www.tellorscan.com/prices
-        freshnessTimeUnit: #day, week, minute, etc. https://day.js.org/docs/en/manipulate/add#list-of-all-available-units
-        freshnessTimeLength: #amount of timeUnit https://day.js.org/docs/en/manipulate/add#list-of-all-available-units
-        dataFreshness: #str: 
-      env: #adjust secrets for rinkeby vs mainnet
+        dataFreshness: #str: the longest duration of time (ex. 1 day, 2 weeks, etc)
+                       #you would wait before requesting new on-chain data
+      env:
         PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }} # your account's public key
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # your account's private key
         MAINNET_NODE: ${{ secrets.MAINNET_NODE }} #your JSON-RPC mainnet endpoint.
