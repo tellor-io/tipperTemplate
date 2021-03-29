@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: tellor-io/tipper@master
       with:
-        network: #str: choose between "rinkeby" and "mainnet"
+        network: #str: choose between "rinkeby", "mainnet", and "goerli"
         requestID: # int: the ID of the data type you'd like to tip.
                    # more info at https://www.tellorscan.com/prices
         dataFreshness: # str: the longest duration of time (ex. 1 day, 2 weeks, etc)
