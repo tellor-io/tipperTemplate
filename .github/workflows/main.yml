@@ -9,7 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout tip executor
+      uses: actions/checkout@v2
+    
+    - name: Checkout tipper backend
+      uses: actions/checkout@2
+        with:
+          repository: tellor-io/tipper
+          path: master
     - uses: tellor-io/tipper@master
       with:
         network: #str: choose between "rinkeby" and "mainnet"
