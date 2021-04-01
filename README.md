@@ -29,4 +29,4 @@ You can find the names of the github secrets to set on the `main.yml` file. Note
 ## What are my choices for editing the workflow?
 * `network` -- the ethereum network you'd like to connect with. Choose between "rinkeby" and "mainnet".
 * `requestID` -- the data type you'd like to request (ex. 1 for ETH/USD). You can find the list of all current tip IDs [here](https://www.tellorscan.com/prices).
-* `dataFreshness` -- this is your preferred amount of time since this `requestID` was last updated on-chain on your chosen `network`. 
+* `dataFreshness` -- this is your preferred amount of time (human-like strings accepted!) since this `requestID` was last updated on-chain on your chosen `network`. ex: 12 hours, 6 days, etc.
