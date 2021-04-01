@@ -9,9 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    # Checks out this repo
     - name: Checkout tip executor
       uses: actions/checkout@v2
     
+    # Checks out the tipper repo (the backend and script)
     - name: Checkout tipper backend
       uses: actions/checkout@2
       with:

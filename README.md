@@ -16,7 +16,8 @@ You can find the names of the github secrets to set on the `main.yml` file. Note
 * `PUBLIC_KEY` -- your account's public key
 * `PRIVATE_KEY` -- your account's private key
 * `MAINNET_NODE` -- your JSON-RPC mainnet endpoint. usually HTTP.
-* `RINKEBY_NODE` -- your JSON-RPC rinkeby endpoint. ususally HTTP.
+* `RINKEBY_NODE` -- your JSON-RPC rinkeby endpoint. usually HTTP.
+* `GOERLI_NODE` -- your JSON-RPC goerli endpoint. usually HTTP.
 
 ## How can I update the workflow from github?
 1. Navigate to `main.yml` in the `.github/workflows` directory.
