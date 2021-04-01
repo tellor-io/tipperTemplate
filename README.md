@@ -28,9 +28,5 @@ You can find the names of the github secrets to set on the `main.yml` file. Note
 
 ## What are my choices for editing the workflow?
 * `network` -- the ethereum network you'd like to connect with. Choose between "rinkeby" and "mainnet".
-* `tipID` -- the data type you'd like to request (ex. 1 for ETH/USD). You can find the list of all current tip IDs [here](https://www.tellorscan.com/prices).
-* `dataFreshness` -- this is your preferred amount of time since last request to this `tipID` on your chosen `network`. This variable uses two workflow variables. These are:
-    * `freshnessTimeUnit` -- the unit of time you'd like to check for the most recent tip on your `requestID`. Ex: week, day, second, etc. For more information, visit https://day.js.org/docs/en/manipulate/add#list-of-all-available-units.
-    * `freshnessTimeLength` -- the amount of your `freshnessTimeUnit` (ex. week, day, second, year) you'd like to check for.
-
-    * Combined, these two workflow variables will save you TRB on unnecessary tips.
+* `requestID` -- the data type you'd like to request (ex. 1 for ETH/USD). You can find the list of all current tip IDs [here](https://www.tellorscan.com/prices).
+* `dataFreshness` -- this is your preferred amount of time since this `requestID` was last updated on-chain on your chosen `network`. 
