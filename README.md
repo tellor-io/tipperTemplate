@@ -22,11 +22,5 @@ You can find the names of the github secrets to set on the `main.yml` file. Note
 ## How can I update the workflow from github?
 1. Navigate to `main.yml` in the `.github/workflows` directory.
 2. Edit `main.yml` ![edit yml](helper-images/edit-yaml.png "editing")
-3. On lines 15 and 16, fill in your preferred `network` and tip ID (`tipID`).
-4. On line 4, update your cronjob preferences (how often you'll request Tellor oracle data) according to your needs. Cronjob documentation is provided in the comments!
-5. Commit changes!
-
-## What are my choices for editing the workflow?
-* `network` -- the ethereum network you'd like to connect with. Choose between "rinkeby" and "mainnet".
-* `requestID` -- the data type you'd like to request (ex. 1 for ETH/USD). You can find the list of all current tip IDs [here](https://www.tellorscan.com/prices).
-* `dataFreshness` -- this is your preferred amount of time (human-like strings accepted!) since this `requestID` was last updated on-chain on your chosen `network`. ex: 12 hours, 6 days, etc.
+3. From here, follow along with the comments to edit the workflow as needed.
+4. Commit changes!
