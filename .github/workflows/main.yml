@@ -1,7 +1,7 @@
-name: TipTester
+name: TipperTemplate #change name to your liking
 on:
   schedule: 
-  - cron: "0 0 * * *"  # schedule tipping to your preference https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
+  - cron: "*/15 * * * *"  # schedule tipping to your preference https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
 
 
 jobs:
@@ -9,19 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    # Checks out this repo
-    - name: Checkout tip executor
-      uses: actions/checkout@v2
-    
-    # Checks out the tipper repo (the backend and script)
-    - name: Checkout tipper backend
-      uses: actions/checkout@2
-      with:
-        repository: tellor-io/tipper
-        path: master
     - uses: tellor-io/tipper@master
       with:
-        network: #str: choose between "rinkeby", "mainnet", and "goerli"
+        network:  #str: choose between "rinkeby" and "mainnet"
         requestID: # int: the ID of the data type you'd like to tip.
                    # more info at https://www.tellorscan.com/prices
         dataFreshness: # str: the longest duration of time (ex. 1 day, 2 weeks, etc)
@@ -34,3 +24,4 @@ jobs:
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # your account's private key
         MAINNET_NODE: ${{ secrets.MAINNET_NODE }} #your JSON-RPC mainnet endpoint.
         RINKEBY_NODE: ${{ secrets.RINKEBY_NODE }} #your JSON-RPC rinkeby endpoint.
+        GOERLI_NODE: ${{ secrets.GOERLI_NODE }} #your JSON-RPC goerli endpoint.
